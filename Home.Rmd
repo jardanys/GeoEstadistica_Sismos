@@ -93,10 +93,7 @@ map <- leaflet(data=datosdf) %>%
        addCircleMarkers(lng =~Longitud, lat =~Latitud, radius = ~ sqrt(100), stroke = FALSE, 
                         fillOpacity = 0.8, label = ~as.character(paste(Municipio, Magnitud.Ml)), 
                         color = ~pal(Magnitud.Ml)) %>%
-       addLegend("bottomright", pal = pal, values = ~Magnitud.Ml,
-                 title = "Magnitud Escala Richter",
-    opacity = 1
-  ) 
+       addLegend("bottomright", pal = pal, values = ~Magnitud.Ml, title = "Magnitud Escala Richter", opacity = 1) 
 
 map %>% 
   addProviderTiles(providers$OpenStreetMap) %>% 
